@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="К3 — исследовательско-стратегическое агентство">
+  <rect width="1200" height="630" fill="#F1EFE8"/>
+  <g opacity=".18" stroke="#085041" stroke-width="1">
+    <path d="M0 90h1200M0 180h1200M0 270h1200M0 360h1200M0 450h1200M0 540h1200"/>
+    <path d="M90 0v630M180 0v630M270 0v630M360 0v630M450 0v630M540 0v630M630 0v630M720 0v630M810 0v630M900 0v630M990 0v630M1080 0v630"/>
+  </g>
+  <path d="M70 70h150v8H78v142h-8V70Zm910 0h150v150h-8V78H980v-8ZM70 410h8v142h142v8H70V410Zm1052 0h8v150H980v-8h142V410Z" fill="#FAC775"/>
+  <circle cx="246" cy="380" r="8" fill="#085041"/>
+  <circle cx="940" cy="196" r="8" fill="#1D9E75"/>
+  <circle cx="792" cy="444" r="8" fill="#085041"/>
+  <text x="100" y="260" font-family="Unbounded, Arial, sans-serif" font-size="150" font-weight="800" fill="#04342C">К3</text>
+  <text x="100" y="344" font-family="Unbounded, Arial, sans-serif" font-size="34" font-weight="800" fill="#085041">Контекст · Культура · Качество</text>
+  <text x="100" y="424" font-family="Unbounded, Arial, sans-serif" font-size="39" font-weight="800" fill="#04342C">Исследовательско-стратегическое агентство</text>
+  <text x="100" y="486" font-family="Unbounded, Arial, sans-serif" font-size="26" font-weight="500" fill="#04342C" opacity=".76">Данные о людях → понятные решения для брендов</text>
+</svg>

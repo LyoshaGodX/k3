@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="К3">
+  <rect width="128" height="128" fill="#04342C"/>
+  <path d="M18 18h28v6H24v22h-6V18Zm64 0h28v28h-6V24H82v-6ZM18 82h6v22h22v6H18V82Zm86 0h6v28H82v-6h22V82Z" fill="#9FE1CB"/>
+  <text x="64" y="80" text-anchor="middle" font-family="Unbounded, Arial, sans-serif" font-size="42" font-weight="800" fill="#F1EFE8">К3</text>
+  <circle cx="28" cy="64" r="4" fill="#FAC775"/>
+  <circle cx="100" cy="64" r="4" fill="#1D9E75"/>
+</svg>
