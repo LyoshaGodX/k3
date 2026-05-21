@@ -1,0 +1,431 @@
+@media (max-width: 1120px) {
+  .nav-links {
+    display: none;
+  }
+
+  .header-inner {
+    min-height: 70px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+
+  .split-section,
+  .method-layout,
+  .report-layout,
+  .team-layout,
+  .contact-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 46px;
+  }
+
+  .problem .split-section {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .problem .observation-grid {
+    height: auto;
+    min-height: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+    align-content: start;
+    row-gap: 18px;
+  }
+
+  .problem .observation-card {
+    height: auto;
+    min-height: 180px;
+  }
+
+  .method .section-copy {
+    min-height: 0;
+  }
+
+  .method-lead-card {
+    flex: none;
+    min-height: 0;
+    margin-top: 22px;
+  }
+
+  .services-grid,
+  .specialization-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .timeline-shell {
+    padding: 28px;
+  }
+
+  .timeline {
+    gap: 16px;
+  }
+
+  .timeline::before {
+    top: 0;
+    bottom: 0;
+    left: 29px;
+    right: auto;
+    width: 1px;
+    height: auto;
+    transform: none;
+  }
+
+  .timeline-item {
+    grid-template-columns: 58px minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .timeline-index {
+    grid-column: 1;
+    width: 58px;
+    height: 58px;
+    transform: none;
+  }
+
+  .timeline-card,
+  .timeline-item:nth-child(even) .timeline-card {
+    grid-column: 2;
+  }
+
+  .timeline-item::after {
+    display: none;
+  }
+
+  .footer-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  body {
+    font-size: 16px;
+  }
+
+  body::before,
+  .dark-section::before,
+  .contact {
+    background-size: 44px 44px;
+  }
+
+  .container {
+    width: min(calc(100% - 32px), var(--container));
+  }
+
+  .section-band {
+    padding: 76px 0;
+  }
+
+  .site-header {
+    position: sticky;
+    background: rgba(241, 239, 232, 0.9);
+  }
+
+  .header-contact,
+  .brand-caption {
+    display: none;
+  }
+
+  .header-inner {
+    justify-content: space-between;
+    min-height: 48px;
+    gap: 12px;
+  }
+
+  .site-header .brand-sign {
+    width: 38px;
+    height: 30px;
+    font-size: 17px;
+  }
+
+  .mobile-header-contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 30px;
+    padding: 6px 10px;
+    border: 1px solid rgba(8, 80, 65, 0.24);
+    border-radius: 6px;
+    color: var(--green);
+    background: rgba(248, 245, 236, 0.72);
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 56px 0 72px;
+  }
+
+  .hero .container {
+    width: min(calc(100% - 20px), var(--container));
+  }
+
+  .hero-inner {
+    padding-inline: 8px;
+  }
+
+  .hero-scene::before {
+    inset: 34px 10px 28px;
+  }
+
+  .hero-scene::after,
+  .data-dot,
+  .insight-chip,
+  .map-line-c,
+  .dot-e {
+    display: none;
+  }
+
+  .map-line-a {
+    top: 18%;
+    left: -8%;
+    width: 240px;
+  }
+
+  .map-line-b {
+    top: 78%;
+    right: -20%;
+    width: 260px;
+  }
+
+  .hero-mark {
+    width: min(100%, 292px);
+    min-width: 0;
+    min-height: 110px;
+    margin-bottom: 20px;
+  }
+
+  .hero-mark::before,
+  .hero-mark::after {
+    width: 34px;
+    height: 34px;
+  }
+
+  .mark-letter {
+    font-size: 92px;
+  }
+
+  .mark-core {
+    --mark-step: 18px;
+    width: 112px;
+    min-height: 64px;
+    margin: 0 4px;
+    padding-left: 30px;
+    font-size: 11px;
+  }
+
+  .mark-core::before {
+    left: 20px;
+    top: 8px;
+    bottom: 8px;
+  }
+
+  .mark-lens {
+    left: 3px;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .mark-lens::after {
+    right: -5px;
+    bottom: -4px;
+    width: 8px;
+  }
+
+  .mark-words {
+    gap: 4px;
+  }
+
+  h1 {
+    font-size: 38px;
+    line-height: 1.1;
+  }
+
+  .hero h1 {
+    margin-bottom: 18px;
+    max-width: 360px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.18;
+    text-wrap: balance;
+    hyphens: manual;
+    overflow-wrap: normal;
+  }
+
+  h2 {
+    font-size: 31px;
+    line-height: 1.16;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .hero-lead,
+  .section-lead {
+    font-size: 17px;
+  }
+
+  .hero .eyebrow {
+    margin-bottom: 12px;
+    font-size: 11px;
+  }
+
+  .hero-lead {
+    max-width: 340px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-wrap: balance;
+  }
+
+  .hero-actions {
+    width: min(100%, 252px);
+    margin-inline: auto;
+    margin-bottom: 0;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero .btn {
+    min-height: 44px;
+    padding: 11px 14px;
+    font-size: 13px;
+  }
+
+  .observation-grid,
+  .services-grid,
+  .specialization-grid,
+  .team-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .problem .observation-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .observation-card,
+  .service-card,
+  .specialization-card,
+  .chain-card {
+    min-height: auto;
+  }
+
+  .process-chain {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .process-chain::before {
+    display: none;
+  }
+
+  .founder-card {
+    grid-column: auto;
+  }
+
+  .founder-note {
+    font-size: 19px;
+  }
+
+  .deliverable-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .timeline-shell {
+    padding: 0;
+  }
+
+  .timeline-item {
+    grid-template-columns: 44px minmax(0, 1fr);
+    padding: 0;
+  }
+
+  .timeline-index {
+    width: 44px;
+    height: 44px;
+    font-size: 12px;
+  }
+
+  .timeline::before {
+    left: 22px;
+  }
+
+  .timeline-card {
+    padding: 20px;
+  }
+
+  .team-card,
+  .founder-card {
+    min-height: 0;
+  }
+
+  .contact-form {
+    padding: 22px;
+  }
+
+  .contact-email {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 380px) {
+  h1 {
+    font-size: 34px;
+    line-height: 1.12;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .mark-letter {
+    font-size: 78px;
+  }
+
+  .mark-core {
+    width: 96px;
+    margin: 0 2px;
+    padding-left: 26px;
+    font-size: 10px;
+  }
+
+  .mark-core::before {
+    left: 17px;
+  }
+
+  .mark-lens {
+    left: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,182 @@
+@font-face {
+  font-family: "Unbounded";
+  src: url("../fonts/Unbounded/Unbounded-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --graphite: #04342c;
+  --milk: #f1efe8;
+  --green: #085041;
+  --accent: #1d9e75;
+  --gold: #fac775;
+  --mint: #9fe1cb;
+  --terra: #633806;
+  --lime: #9fe1cb;
+  --line: rgba(4, 52, 44, 0.16);
+  --line-strong: rgba(4, 52, 44, 0.28);
+  --dark-line: rgba(241, 239, 232, 0.18);
+  --shadow: 0 18px 60px rgba(4, 52, 44, 0.08);
+  --container: 1280px;
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--graphite);
+  background: var(--milk);
+  font-family: "Unbounded", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(rgba(4, 52, 44, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(4, 52, 44, 0.045) 1px, transparent 1px),
+    var(--milk);
+  background-size: 72px 72px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  padding: 10px 14px;
+  color: var(--milk);
+  background: var(--graphite);
+  transform: translateY(-140%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.container {
+  width: min(calc(100% - 48px), var(--container));
+  margin: 0 auto;
+}
+
+.section-band {
+  position: relative;
+  padding: 108px 0;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: var(--terra);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+h1 {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin-bottom: 24px;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.16;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 14px 22px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  overflow-wrap: anywhere;
+  transition: transform 160ms ease, background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  color: var(--milk);
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.btn-primary:hover {
+  background: var(--graphite);
+  border-color: var(--accent);
+}
+
+.btn-secondary {
+  color: var(--graphite);
+  background: rgba(241, 239, 232, 0.72);
+  border-color: rgba(4, 52, 44, 0.28);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+

@@ -1,6 +1,11 @@
-const revealItems = document.querySelectorAll(".reveal");
+const initRevealAnimations = () => {
+  const revealItems = document.querySelectorAll(".reveal");
 
-if ("IntersectionObserver" in window) {
+  if (!("IntersectionObserver" in window)) {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+    return;
+  }
+
   const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -14,14 +19,16 @@ if ("IntersectionObserver" in window) {
   );
 
   revealItems.forEach((item) => revealObserver.observe(item));
-} else {
-  revealItems.forEach((item) => item.classList.add("is-visible"));
-}
+};
 
-const contactForm = document.querySelector("#contact-form");
-const formStatus = document.querySelector("#form-status");
+const initContactForm = () => {
+  const contactForm = document.querySelector("#contact-form");
+  const formStatus = document.querySelector("#form-status");
 
-if (contactForm && formStatus) {
+  if (!contactForm || !formStatus) {
+    return;
+  }
+
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -50,7 +57,7 @@ if (contactForm && formStatus) {
     window.location.href = `mailto:hello@k-3.top?subject=${subject}&body=${body}`;
     contactForm.reset();
   });
-}
+};
 
 const createCardLens = ({
   layoutSelector,
@@ -130,7 +137,6 @@ const createCardLens = ({
       };
 
       card.addEventListener("pointerenter", selectCard);
-      card.addEventListener("mouseenter", selectCard);
       card.addEventListener("focusin", selectCard);
     }
   });
@@ -143,16 +149,22 @@ const createCardLens = ({
   }
 };
 
-createCardLens({
-  layoutSelector: ".method-layout",
-  lensSelector: ".method-lens",
-  cardSelector: ".principle-card",
-});
+const initCardLenses = () => {
+  createCardLens({
+    layoutSelector: ".method-layout",
+    lensSelector: ".method-lens",
+    cardSelector: ".principle-card",
+  });
 
-createCardLens({
-  layoutSelector: ".report-layout",
-  lensSelector: ".result-lens",
-  cardSelector: ".deliverable-card",
-  targetSelector: "span",
-  alignToCardBorder: true,
-});
+  createCardLens({
+    layoutSelector: ".report-layout",
+    lensSelector: ".result-lens",
+    cardSelector: ".deliverable-card",
+    targetSelector: "span",
+    alignToCardBorder: true,
+  });
+};
+
+initRevealAnimations();
+initContactForm();
+initCardLenses();
