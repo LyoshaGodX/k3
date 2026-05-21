@@ -169,6 +169,10 @@ button {
   font-weight: 800;
 }
 
+.mobile-header-contact {
+  display: none;
+}
+
 .hero {
   display: flex;
   align-items: center;
@@ -1540,6 +1544,7 @@ h3 {
   display: grid;
   gap: 16px;
   padding: 28px;
+  scroll-margin-top: 64px;
   background: rgba(248, 245, 236, 0.86);
   box-shadow: var(--shadow);
 }
@@ -1841,7 +1846,8 @@ h3 {
   }
 
   .site-header {
-    position: static;
+    position: sticky;
+    background: rgba(241, 239, 232, 0.9);
   }
 
   .header-contact,
@@ -1850,7 +1856,31 @@ h3 {
   }
 
   .header-inner {
+    justify-content: space-between;
+    min-height: 48px;
+    gap: 12px;
+  }
+
+  .site-header .brand-sign {
+    width: 38px;
+    height: 30px;
+    font-size: 17px;
+  }
+
+  .mobile-header-contact {
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
+    min-height: 30px;
+    padding: 6px 10px;
+    border: 1px solid rgba(8, 80, 65, 0.24);
+    border-radius: 6px;
+    color: var(--green);
+    background: rgba(248, 245, 236, 0.72);
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
   }
 
   .hero {
@@ -1858,11 +1888,20 @@ h3 {
     padding: 56px 0 72px;
   }
 
+  .hero .container {
+    width: min(calc(100% - 20px), var(--container));
+  }
+
+  .hero-inner {
+    padding-inline: 8px;
+  }
+
   .hero-scene::before {
-    inset: 34px 16px 28px;
+    inset: 34px 10px 28px;
   }
 
   .hero-scene::after,
+  .data-dot,
   .insight-chip,
   .map-line-c,
   .dot-e {
@@ -1935,6 +1974,17 @@ h3 {
     line-height: 1.1;
   }
 
+  .hero h1 {
+    margin-bottom: 18px;
+    max-width: 360px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.18;
+    text-wrap: balance;
+    hyphens: manual;
+    overflow-wrap: normal;
+  }
+
   h2 {
     font-size: 31px;
     line-height: 1.16;
@@ -1949,13 +1999,38 @@ h3 {
     font-size: 17px;
   }
 
-  .hero-actions,
+  .hero .eyebrow {
+    margin-bottom: 12px;
+    font-size: 11px;
+  }
+
+  .hero-lead {
+    max-width: 340px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-wrap: balance;
+  }
+
+  .hero-actions {
+    width: min(100%, 252px);
+    margin-inline: auto;
+    margin-bottom: 0;
+    gap: 10px;
+  }
+
   .hero-formula {
     width: 100%;
   }
 
   .btn {
     width: 100%;
+  }
+
+  .hero .btn {
+    min-height: 44px;
+    padding: 11px 14px;
+    font-size: 13px;
   }
 
   .hero-formula {
@@ -2069,18 +2144,23 @@ h3 {
     line-height: 1.12;
   }
 
+  .hero h1 {
+    font-size: 26px;
+  }
+
   .mark-letter {
-    font-size: 84px;
+    font-size: 78px;
   }
 
   .mark-core {
-    width: 104px;
+    width: 96px;
     margin: 0 2px;
-    padding-left: 28px;
+    padding-left: 26px;
+    font-size: 10px;
   }
 
   .mark-core::before {
-    left: 19px;
+    left: 17px;
   }
 
   .mark-lens {
