@@ -449,6 +449,8 @@ h2,
 h3,
 p {
   margin-top: 0;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 h1 {
@@ -507,6 +509,8 @@ h3 {
   font-size: 15px;
   font-weight: 800;
   line-height: 1.2;
+  text-align: center;
+  overflow-wrap: anywhere;
   transition: transform 160ms ease, background-color 160ms ease, color 160ms ease, border-color 160ms ease;
 }
 
@@ -562,6 +566,32 @@ h3 {
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 72px;
   align-items: start;
+}
+
+.hero-inner,
+.section-copy,
+.section-heading,
+.observation-grid,
+.card-grid,
+.process-chain,
+.principles,
+.deliverable-list,
+.timeline,
+.team-grid,
+.contact-copy,
+.contact-form,
+.split-section > *,
+.method-layout > *,
+.report-layout > *,
+.team-layout > *,
+.contact-layout > *,
+.observation-grid > *,
+.card-grid > *,
+.process-chain > *,
+.team-grid > *,
+.deliverable-card > *,
+.timeline-item > * {
+  min-width: 0;
 }
 
 .problem .split-section {
@@ -1709,12 +1739,12 @@ h3 {
   .report-layout,
   .team-layout,
   .contact-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 46px;
   }
 
   .problem .split-section {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     align-items: start;
   }
 
@@ -1787,7 +1817,7 @@ h3 {
   }
 
   .footer-inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -1852,7 +1882,8 @@ h3 {
   }
 
   .hero-mark {
-    min-width: 292px;
+    width: min(100%, 292px);
+    min-width: 0;
     min-height: 110px;
     margin-bottom: 20px;
   }
@@ -1937,11 +1968,11 @@ h3 {
   .services-grid,
   .specialization-grid,
   .team-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .problem .observation-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .observation-card,
@@ -1952,7 +1983,7 @@ h3 {
   }
 
   .process-chain {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .process-chain::before {
@@ -1968,33 +1999,92 @@ h3 {
   }
 
   .deliverable-card {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .result-storyline {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    margin-top: 28px;
+    padding-top: 0;
+    padding-left: 20px;
+  }
+
+  .result-storyline::before {
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 7px;
+    width: 1px;
+    height: auto;
+    background: linear-gradient(180deg, var(--accent), var(--gold), transparent);
+  }
+
+  .result-storyline span::before {
+    top: 50%;
+    left: -17px;
+    transform: translateY(-50%);
   }
 
   .timeline-shell {
-    padding: 22px 16px;
+    padding: 0;
   }
 
   .timeline-item {
-    grid-template-columns: 52px minmax(0, 1fr);
+    grid-template-columns: 44px minmax(0, 1fr);
     padding: 0;
   }
 
   .timeline-index {
-    width: 52px;
-    height: 52px;
+    width: 44px;
+    height: 44px;
+    font-size: 12px;
   }
 
   .timeline::before {
-    left: 26px;
+    left: 22px;
   }
 
   .timeline-card {
+    padding: 20px;
+  }
+
+  .team-card,
+  .founder-card {
+    min-height: 0;
+  }
+
+  .contact-form {
     padding: 22px;
   }
 
   .contact-email {
     font-size: 22px;
+  }
+}
+
+@media (max-width: 380px) {
+  h1 {
+    font-size: 34px;
+    line-height: 1.12;
+  }
+
+  .mark-letter {
+    font-size: 84px;
+  }
+
+  .mark-core {
+    width: 104px;
+    margin: 0 2px;
+    padding-left: 28px;
+  }
+
+  .mark-core::before {
+    left: 19px;
+  }
+
+  .mark-lens {
+    left: 2px;
   }
 }
 
